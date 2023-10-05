@@ -35,10 +35,23 @@ export default function Home() {
             </div>
             <div className="flex items-center justify-center bg-[#cffadf] rounded-full px-2 py-[1px]">
               <div className="w-2 h-2 mr-2 rounded-full bg-[#29c780]" />
-              <p className="text-[12px] text-[#019853]">Available for Work</p>
+              <p className="text-[12px] text-[#019853]">Limited Availability for Q4 2023</p>
             </div>
           </div>
-          <div className="flex items-center flex-col justify-between mt-8"></div>
+          
+          <div className="flex items-center flex-col md:flex-row-reverse justify-between mt-8">
+            <div className="w-[30%]">
+              <img
+                src="https://avatars.githubusercontent.com/u/5985730?v=4"
+                width={140}
+                className="p-1 mx-auto dark:bg-[#252529] bg-[#ffffffe6] shadow-md rounded-full"
+              />
+            </div>
+            <div className="w-[70%]">
+              <h1 className="text-center md:text-start text-[32px] mt-4">Hi! I'm Sam</h1>
+              <p className="text-center md:text-start dark:text-[#a1a1aa] text-[#a1a1aa] mt-4">Software Developer at objective.dev</p>
+            </div>
+          </div>
         </div>
       </main>
     </div>
