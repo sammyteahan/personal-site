@@ -49,7 +49,28 @@ export default function Home() {
             </div>
             <div className="w-[70%]">
               <h1 className="text-center md:text-start text-[32px] mt-4">Hi! I'm Sam</h1>
-              <p className="text-center md:text-start dark:text-[#a1a1aa] text-[#a1a1aa] mt-4">Software Developer at objective.dev</p>
+              <p className="text-center md:text-start dark:text-[#a1a1aa] text-[#a1a1aa] mt-4">Software Developer at <a href="https://objective.dev" className="underline underline-offset-2">Objective</a></p>
+            </div>
+          </div>
+        </div>
+
+        <div className="mt-10">
+          <div className="py-[10px] shadow-none rounded-[15px] max-w-[36rem] dark:border-[#1d1d1d] text-[#71767a]">
+            <div className="flex items-center">
+              <h2 className="flex text-lg font-semibold text-[#0f1419] dark:text-[#e7e9ea]">Work</h2>
+            </div>
+            <div className="flex justify-between items-center py-8">
+              <div className="flex">
+                <div className="flex flex-auto flex-wrap gap-x-2">
+                  <span className="w-full flex-none text-[14px] text-zinc-900 dark:text-[#e7e9ea]">Objective</span>
+                  <span className="w-full flex-none text-[14px] text-zinc-900 dark:text-[#e7e9ea]">Software Developer</span>
+                </div>
+              </div>
+              <dd className="ml-auto mr-3 text-sm" aria-label="2016 until Present">
+                <time dateTime="2016">2016</time>
+                <span aria-hidden="true">—</span>
+                <time dateTime="2023">Present</time>
+              </dd>
             </div>
           </div>
         </div>
