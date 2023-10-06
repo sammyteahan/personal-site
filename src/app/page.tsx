@@ -78,7 +78,6 @@ export default function Home() {
             <div className="flex items-center">
               <h2 className="flex text-lg font-semibold text-[#0f1419] dark:text-[#e7e9ea]">Follow me</h2>
             </div>
-
             <div className="mt-4">
               <a 
                 className="flex items-center justify-between py-3 cursor-pointer"
@@ -104,7 +103,6 @@ export default function Home() {
               </a>
             </div>
           </div>
-
         </div>
       </main>
     </div>
