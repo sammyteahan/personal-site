@@ -1,5 +1,6 @@
 "use client"
 
+import Image from 'next/image'
 import { useTheme } from "next-themes"
 import { Moon, Sun, Github, Linkedin, MoveUpRight } from "lucide-react"
 
@@ -41,14 +42,16 @@ export default function Home() {
           
           <div className="flex items-center flex-col md:flex-row-reverse justify-between mt-8">
             <div className="w-[30%]">
-              <img
-                src="https://avatars.githubusercontent.com/u/5985730?v=4"
+              <Image
+                alt="avatar image"
+                src="/avatar_md.png"
                 width={140}
+                height={140}
                 className="p-1 mx-auto dark:bg-[#252529] bg-[#ffffffe6] shadow-md rounded-full"
               />
             </div>
             <div className="w-[70%]">
-              <h1 className="text-center md:text-start text-[32px] mt-4">Hi! I'm Sam</h1>
+              <h1 className="text-center md:text-start text-[32px] mt-4">Hi! I&apos;m Sam</h1>
               <p className="text-center md:text-start dark:text-[#a1a1aa] text-[#a1a1aa] mt-4">
                 Software Developer at <a href="https://objective.dev" className="underline underline-offset-2">Objective</a>
               </p>
@@ -65,7 +68,13 @@ export default function Home() {
             <div className="flex justify-between items-center py-6">
               <div className="flex">
                 <div>
-                  <img src="/logo_sm_objective.jpeg" width="45" className="rounded-full outline outline-1 outline-[#18181B] md:ml-2" />
+                  <Image
+                    alt="logo of objective"
+                    src="/logo_sm_objective.jpeg"
+                    width="45"
+                    height="45"
+                    className="rounded-full outline outline-1 outline-[#18181B] md:ml-2"
+                  />
                 </div>
                 <div className="flex flex-auto flex-wrap gap-x-2 ml-4">
                   <span className="w-full flex-none text-[14px] text-zinc-900 dark:text-[#e7e9ea]">Objective</span>
@@ -82,7 +91,13 @@ export default function Home() {
             <div className="flex justify-between items-center py-6">
               <div className="flex">
                 <div>
-                  <img src="/logo_sm_lk.jpeg" width="45" className="rounded-full outline outline-1 outline-[#18181B] md:ml-2" />
+                  <Image
+                    alt="logo of lightning kite"
+                    src="/logo_sm_lk.jpeg"
+                    width="45"
+                    height="45"
+                    className="rounded-full outline outline-1 outline-[#18181B] md:ml-2"
+                  />
                 </div>
                 <div className="flex flex-auto flex-wrap gap-x-2 ml-4">
                   <span className="w-full flex-none text-[14px] text-zinc-900 dark:text-[#e7e9ea]">Lightning Kite</span>
@@ -99,7 +114,13 @@ export default function Home() {
             <div className="flex justify-between items-center py-6">
               <div className="flex">
                 <div>
-                  <img src="/logo_sm_usu.jpeg" width="45" className="rounded-full outline outline-1 outline-[#18181B] md:ml-2" />
+                  <Image
+                    alt="logo of utah state university"
+                    src="/logo_sm_usu.jpeg"
+                    width="45"
+                    height="45"
+                    className="rounded-full outline outline-1 outline-[#18181B] md:ml-2"
+                  />
                 </div>
                 <div className="flex flex-auto flex-wrap gap-x-2 ml-4">
                   <span className="w-full flex-none text-[14px] text-zinc-900 dark:text-[#e7e9ea]">Utah State University</span>
