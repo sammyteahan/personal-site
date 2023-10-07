@@ -10,10 +10,15 @@ export default {
   },
   stacks(app) {
     app.stack(function Site({ stack }) {
-      const site = new NextjsSite(stack, "site");
+      const site = new NextjsSite(stack, "site", {
+        customDomain: {
+          domainName: "sammyteahan.com",
+          domainAlias: "www.sammyteahan.com",
+        },
+      });
 
       stack.addOutputs({
-        SiteUrl: site.url,
+        SiteUrl: site.customDomainUrl || site.url,
       });
     });
   },
