@@ -43,6 +43,7 @@ export default function Home() {
           <div className="flex items-center flex-col md:flex-row-reverse justify-between mt-8">
             <div className="w-[30%]">
               <Image
+                priority
                 alt="avatar image"
                 src="/avatar_md.png"
                 width={140}
