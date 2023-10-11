@@ -5,6 +5,7 @@ import { useTheme } from "next-themes"
 import { Moon, Sun, Github, Linkedin, MoveUpRight } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
+import ExperienceRow from '@/components/experience-row'
 
 export default function Home() {
   const { theme, setTheme } = useTheme()
@@ -65,76 +66,51 @@ export default function Home() {
             <div className="flex items-center">
               <h2 className="flex text-lg font-semibold text-[#0f1419] dark:text-[#e7e9ea]">Work & Education</h2>
             </div>
-
-            <div className="flex justify-between items-center py-6">
-              <div className="flex">
-                <div>
-                  <Image
-                    alt="logo of objective"
-                    src="/logo_sm_objective.jpeg"
-                    width="45"
-                    height="45"
-                    className="rounded-full outline outline-1 outline-[#18181B] md:ml-2"
-                  />
-                </div>
-                <div className="flex flex-auto flex-wrap gap-x-2 ml-4">
-                  <span className="w-full flex-none text-[14px] text-zinc-900 dark:text-[#e7e9ea]">Objective</span>
-                  <span className="w-full flex-none text-[14px] text-zinc-900 dark:text-[#e7e9ea]">Software Developer</span>
-                </div>
-              </div>
-              <dd className="ml-auto mr-3 text-sm" aria-label="2016 until Present">
-                <time dateTime="2016">2016</time>
-                <span aria-hidden="true"> — </span>
-                <time dateTime="2023">Present</time>
-              </dd>
-            </div>
-
-            <div className="flex justify-between items-center py-6">
-              <div className="flex">
-                <div>
-                  <Image
-                    alt="logo of lightning kite"
-                    src="/logo_sm_lk.jpeg"
-                    width="45"
-                    height="45"
-                    className="rounded-full outline outline-1 outline-[#18181B] md:ml-2"
-                  />
-                </div>
-                <div className="flex flex-auto flex-wrap gap-x-2 ml-4">
-                  <span className="w-full flex-none text-[14px] text-zinc-900 dark:text-[#e7e9ea]">Lightning Kite</span>
-                  <span className="w-full flex-none text-[14px] text-zinc-900 dark:text-[#e7e9ea]">Software Developer</span>
-                </div>
-              </div>
-              <dd className="ml-auto mr-3 text-sm" aria-label="2016 until Present">
-                <time dateTime="2013">2013</time>
-                <span aria-hidden="true"> — </span>
-                <time dateTime="2016">2016</time>
-              </dd>
-            </div>
-
-            <div className="flex justify-between items-center py-6">
-              <div className="flex">
-                <div>
-                  <Image
-                    alt="logo of utah state university"
-                    src="/logo_sm_usu.jpeg"
-                    width="45"
-                    height="45"
-                    className="rounded-full outline outline-1 outline-[#18181B] md:ml-2"
-                  />
-                </div>
-                <div className="flex flex-auto flex-wrap gap-x-2 ml-4">
-                  <span className="w-full flex-none text-[14px] text-zinc-900 dark:text-[#e7e9ea]">Utah State University</span>
-                  <span className="w-full flex-none text-[14px] text-zinc-900 dark:text-[#e7e9ea]">Computer Science Degree</span>
-                </div>
-              </div>
-              <dd className="ml-auto mr-3 text-sm" aria-label="2016 until Present">
-                <time dateTime="2011">2011</time>
-                <span aria-hidden="true"> — </span>
-                <time dateTime="2015">2015</time>
-              </dd>
-            </div>
-
+            <ExperienceRow
+              title="Objective"
+              subtitle="Software Developer"
+              start="2016"
+              end="Present"
+              icon={
+                <Image
+                  alt="logo of objective"
+                  src="/logo_sm_objective.jpeg"
+                  width="45"
+                  height="45"
+                  className="rounded-full outline outline-1 outline-[#18181B] md:ml-2"
+                />
+              }
+            />
+            <ExperienceRow
+              title="Lightning Kite"
+              subtitle="Software Developer"
+              start="2013"
+              end="2016"
+              icon={
+                <Image
+                  alt="logo of lightning kite"
+                  src="/logo_sm_lk.jpeg"
+                  width="45"
+                  height="45"
+                  className="rounded-full outline outline-1 outline-[#18181B] md:ml-2"
+                />
+              }
+            />
+            <ExperienceRow
+              title="Utah State University"
+              subtitle="Computer Science Degree"
+              start="2011"
+              end="2015"
+              icon={
+                <Image
+                  alt="logo of utah state university"
+                  src="/logo_sm_usu.jpeg"
+                  width="45"
+                  height="45"
+                  className="rounded-full outline outline-1 outline-[#18181B] md:ml-2"
+                />
+              }
+            />
           </div>
 
           <div className="py-[10px] shadow-none rounded-[15px] max-w-[36rem] dark:border-[#1d1d1d] text-[#71767a]">
