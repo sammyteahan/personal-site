@@ -11,7 +11,6 @@ export default function Home() {
   return (
     <div className="h-[100vh] overflow-auto scrollbar-hide">
       <Header />
-
       <main className="p-4 max-w-[36rem] mx-auto">
         <div className="mt-4">
           <div className="flex items-center justify-between">
