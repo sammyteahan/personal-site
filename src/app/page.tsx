@@ -20,7 +20,7 @@ export default function Home() {
             </div>
             <div className="flex items-center justify-center bg-[#cffadf] rounded-full px-2 py-[1px]">
               <div className="w-2 h-2 mr-2 rounded-full bg-[#29c780]" />
-              <p className="text-[12px] text-[#019853]">Limited Availability for Q4 2023</p>
+              <p className="text-[12px] text-[#019853]">Limited Availability for Q1 2024</p>
             </div>
           </div>
           
