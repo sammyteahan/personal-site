@@ -12,6 +12,6 @@ export async function middleware(request: NextRequest) {
 /**
  * https://nextjs.org/docs/pages/building-your-application/routing/middleware#matching-paths
  */
-export const config = Object.freeze({
+export const config = {
   matcher: ['/']
-})
+}
