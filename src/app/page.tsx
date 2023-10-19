@@ -23,7 +23,7 @@ export default function Home() {
               <p className="text-[12px] text-[#019853]">Limited Availability for Q1 2024</p>
             </div>
           </div>
-          
+
           <div className="flex items-center flex-col md:flex-row-reverse justify-between mt-8">
             <div className="w-[30%]">
               <Image
