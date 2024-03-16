@@ -7,7 +7,6 @@ import Header from '@/components/header'
 import ExperienceRow from '@/components/experience-row'
 
 export default function Home() {
-
   return (
     <div className="h-[100vh] overflow-auto scrollbar-hide">
       <Header />
