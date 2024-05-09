@@ -19,7 +19,7 @@ const ExperienceRow = (props: ExperienceRowProps) => (
         <span className="w-full flex-none text-[14px] text-zinc-900 dark:text-[#e7e9ea]">{props.subtitle}</span>
       </div>
     </div>
-    <dd className="ml-auto mr-3 text-sm" aria-label="2016 until Present">
+    <dd className="ml-auto mr-3 text-sm">
       <time dateTime="2011">{props.start}</time>
       <span aria-hidden="true"> — </span>
       <time dateTime="2015">{props.end}</time>
