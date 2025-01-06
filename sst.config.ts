@@ -8,6 +8,9 @@ export default {
       region: "us-west-2",
     };
   },
+  /**
+   * stage: prod
+   */
   stacks(app) {
     app.stack(function Site({ stack }) {
       const site = new NextjsSite(stack, "site", {
