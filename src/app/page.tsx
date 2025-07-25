@@ -19,7 +19,7 @@ export default function Home() {
             </div>
             <div className="flex items-center justify-center bg-[#cffadf] rounded-full px-2 py-[1px]">
               <div className="w-2 h-2 mr-2 rounded-full bg-[#29c780]" />
-              <p className="text-[12px] text-[#019853]">Availability for Q3 2025</p>
+              <p className="text-[12px] text-[#019853]">Availability for Q4 2025</p>
             </div>
           </div>
 
@@ -37,7 +37,7 @@ export default function Home() {
             <div className="w-[70%]">
               <h1 className="text-center md:text-start text-[32px] mt-4">Hi! I&apos;m Sam</h1>
               <p className="text-center md:text-start dark:text-[#a1a1aa] text-[#a1a1aa] mt-4">
-                Software Developer at <a href="https://objective.dev" className="underline underline-offset-2">Objective</a>
+                Solutions Architect & Software Developer at <a href="https://objective.dev" className="underline underline-offset-2">Objective</a>
               </p>
             </div>
           </div>
