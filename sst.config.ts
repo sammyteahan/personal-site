@@ -8,17 +8,17 @@ export default {
       region: "us-west-2",
     };
   },
-  /**
-   * stage: prod
-   */
   stacks(app) {
     app.stack(function Site({ stack }) {
       const site = new NextjsSite(stack, "site", {
-        customDomain: {
-          domainName: "sammyteahan.com",
-          domainAlias: "www.sammyteahan.com",
-        },
-      });
+        customDomain:
+          app.stage === "production"
+            ? {
+                domainName: "sammyteahan.com",
+                domainAlias: "www.sammyteahan.com",
+              }
+            : undefined,
+        });
 
       stack.addOutputs({
         SiteUrl: site.customDomainUrl || site.url,
