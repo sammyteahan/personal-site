@@ -1,5 +1,5 @@
-import { SSTConfig } from "sst";
-import { NextjsSite } from "sst/constructs";
+import type { SSTConfig } from "sst";
+import { AstroSite } from "sst/constructs";
 
 export default {
   config(_input) {
@@ -13,12 +13,15 @@ export default {
    */
   stacks(app) {
     app.stack(function Site({ stack }) {
-      const site = new NextjsSite(stack, "site", {
-        customDomain: {
-          domainName: "sammyteahan.com",
-          domainAlias: "www.sammyteahan.com",
-        },
-      });
+      const site = new AstroSite(stack, "site", {
+        customDomain:
+          app.stage === "production"
+            ? {
+                domainName: "sammyteahan.com",
+                domainAlias: "www.sammyteahan.com",
+              }
+            : undefined,
+        });
 
       stack.addOutputs({
         SiteUrl: site.customDomainUrl || site.url,

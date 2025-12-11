@@ -1,0 +1,35 @@
+---
+interface Props {
+  title: string;
+  subtitle: string;
+  start: string;
+  end: string;
+  icon: string;
+  iconAlt: string;
+}
+
+const { title, subtitle, start, end, icon, iconAlt } = Astro.props;
+---
+
+<div class="flex justify-between items-center py-6">
+  <div class="flex">
+    <div>
+      <img
+        src={icon}
+        alt={iconAlt}
+        width="45"
+        height="45"
+        class="rounded-full outline outline-1 outline-[#18181B] md:ml-2"
+      />
+    </div>
+    <div class="flex flex-auto flex-wrap gap-x-2 ml-4">
+      <span class="w-full flex-none text-[14px] text-zinc-900 dark:text-[#e7e9ea]">{title}</span>
+      <span class="w-full flex-none text-[14px] text-zinc-900 dark:text-[#e7e9ea]">{subtitle}</span>
+    </div>
+  </div>
+  <dd class="ml-auto mr-3 text-sm">
+    <time datetime={start}>{start}</time>
+    <span aria-hidden="true"> — </span>
+    <time datetime={end}>{end}</time>
+  </dd>
+</div>
