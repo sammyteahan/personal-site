@@ -1,5 +1,5 @@
 import type { SSTConfig } from "sst";
-import { AstroSite } from "sst/constructs";
+import { StaticSite } from "sst/constructs";
 
 export default {
   config(_input) {
@@ -13,7 +13,9 @@ export default {
    */
   stacks(app) {
     app.stack(function Site({ stack }) {
-      const site = new AstroSite(stack, "site", {
+      const site = new StaticSite(stack, "site", {
+        path: "dist",
+        buildCommand: "npm run build",
         customDomain:
           app.stage === "production"
             ? {
@@ -21,7 +23,7 @@ export default {
                 domainAlias: "www.sammyteahan.com",
               }
             : undefined,
-        });
+      });
 
       stack.addOutputs({
         SiteUrl: site.customDomainUrl || site.url,
