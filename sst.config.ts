@@ -1,28 +1,15 @@
-import { SSTConfig } from "sst";
-import { NextjsSite } from "sst/constructs";
+/// <reference path="./.sst/platform/config.d.ts" />
 
-export default {
-  config(_input) {
+export default $config({
+  app(input) {
     return {
-      name: "sammyteahan",
-      region: "us-west-2",
+      name: "personal-site",
+      removal: input?.stage === "production" ? "retain" : "remove",
+      protect: ["production"].includes(input?.stage),
+      home: "aws",
     };
   },
-  stacks(app) {
-    app.stack(function Site({ stack }) {
-      const site = new NextjsSite(stack, "site", {
-        customDomain:
-          app.stage === "production"
-            ? {
-                domainName: "sammyteahan.com",
-                domainAlias: "www.sammyteahan.com",
-              }
-            : undefined,
-        });
-
-      stack.addOutputs({
-        SiteUrl: site.customDomainUrl || site.url,
-      });
-    });
+  async run() {
+    new sst.aws.Astro("MyWeb");
   },
-} satisfies SSTConfig;
+});
