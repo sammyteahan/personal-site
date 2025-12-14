@@ -42,3 +42,4 @@ next-env.d.ts
 cdk.context.json
 
 .astro
+dist/

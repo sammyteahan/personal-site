@@ -3,13 +3,26 @@
 export default $config({
   app(input) {
     return {
-      name: "personal-site",
+      name: "sammyteahan",
       removal: input?.stage === "production" ? "retain" : "remove",
       protect: ["production"].includes(input?.stage),
       home: "aws",
+      providers: {
+        aws: {
+          region: "us-west-2",
+        },
+      },
     };
   },
   async run() {
-    new sst.aws.Astro("MyWeb");
+    new sst.aws.Astro("Web", {
+      domain:
+        $app.stage === "production"
+          ? {
+              name: "sammyteahan.com",
+              aliases: ["www.sammyteahan.com"],
+            }
+          : undefined,
+    });
   },
 });
