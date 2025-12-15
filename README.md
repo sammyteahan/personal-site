@@ -1,36 +1,41 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Personal Site
 
-## Getting Started
+Astro site for sammyteahan.com
 
-First, run the development server:
+[![forthebadge](/badges/approved-by-george-costanza.svg)](https://forthebadge.com)
+
+#### 🏎 Setup
+
+Install dependencies
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+pnpm i
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Spin up local SST environment
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+pnpx sst dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Cleanup of local resources (optional)
 
-## Learn More
+```bash
+pnpx sst remove --stage sam
+```
 
-To learn more about Next.js, take a look at the following resources:
+#### 🚀 Deployment
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Deploy using the serverless flavor of Astro to AWS using SST
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+```bash
+pnpx sst deploy --stage production
+```
 
-## Deploy on Vercel
+#### ☠️ Tear Down
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+If you'd like to remove a stage, it's pretty simple with SST. Note, that there is currently some protection in place for the production stage.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+```bash
+pnpx sst remove --stage production
+```

@@ -1,37 +1,18 @@
 {
-  "name": "sammyteahan",
-  "version": "0.1.0",
-  "private": true,
+  "name": "pale-parsec",
+  "type": "module",
+  "version": "0.0.1",
   "scripts": {
-    "dev": "sst bind next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "astro": "astro",
+    "build": "astro build",
+    "dev": "astro dev",
+    "preview": "astro preview"
   },
   "dependencies": {
-    "@radix-ui/react-slot": "^1.0.2",
-    "class-variance-authority": "^0.7.0",
-    "clsx": "^2.0.0",
-    "lucide-react": "^0.279.0",
-    "next": "latest",
-    "next-themes": "^0.2.1",
-    "react": "latest",
-    "react-dom": "latest",
-    "tailwind-merge": "^1.14.0",
-    "tailwindcss-animate": "^1.0.7"
-  },
-  "devDependencies": {
-    "@types/node": "latest",
-    "@types/react": "latest",
-    "@types/react-dom": "latest",
-    "autoprefixer": "latest",
-    "eslint": "latest",
-    "eslint-config-next": "latest",
-    "postcss": "latest",
-    "tailwindcss": "latest",
-    "typescript": "latest",
-    "sst": "^2.28.0",
-    "aws-cdk-lib": "2.95.1",
-    "constructs": "10.2.69"
+    "@tailwindcss/vite": "^4.1.18",
+    "astro": "^5.16.5",
+    "astro-sst": "3.1.4",
+    "sst": "3.17.25",
+    "tailwindcss": "^4.1.18"
   }
 }

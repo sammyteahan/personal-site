@@ -40,3 +40,6 @@ next-env.d.ts
 
 # CDK
 cdk.context.json
+
+.astro
+dist/
