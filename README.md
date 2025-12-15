@@ -1,46 +1,41 @@
-# Astro Starter Kit: Basics
+# Personal Site
 
-```sh
-pnpm create astro@latest -- --template basics
+Astro site for sammyteahan.com
+
+[![forthebadge](/badges/approved-by-george-costanza.svg)](https://forthebadge.com)
+
+#### 🏎 Setup
+
+Install dependencies
+
+```bash
+pnpm i
 ```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+Spin up local SST environment
 
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src
-│   ├── assets
-│   │   └── astro.svg
-│   ├── components
-│   │   └── Welcome.astro
-│   ├── layouts
-│   │   └── Layout.astro
-│   └── pages
-│       └── index.astro
-└── package.json
+```bash
+pnpx sst dev
 ```
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+Cleanup of local resources (optional)
 
-## 🧞 Commands
+```bash
+pnpx sst remove --stage sam
+```
 
-All commands are run from the root of the project, from a terminal:
+#### 🚀 Deployment
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `pnpm install`             | Installs dependencies                            |
-| `pnpm dev`             | Starts local dev server at `localhost:4321`      |
-| `pnpm build`           | Build your production site to `./dist/`          |
-| `pnpm preview`         | Preview your build locally, before deploying     |
-| `pnpm astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `pnpm astro -- --help` | Get help using the Astro CLI                     |
+Deploy using the serverless flavor of Astro to AWS using SST
 
-## 👀 Want to learn more?
+```bash
+pnpx sst deploy --stage production
+```
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+#### ☠️ Tear Down
+
+If you'd like to remove a stage, it's pretty simple with SST. Note, that there is currently some protection in place for the production stage.
+
+```bash
+pnpx sst remove --stage production
+```
