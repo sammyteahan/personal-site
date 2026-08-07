@@ -1,0 +1,23 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import Header from "@/components/Header.astro";
+---
+
+<Layout title="sammyteahan — not found">
+    <div class="h-[100vh] overflow-auto scrollbar-hide">
+        <Header />
+        <main class="p-4 max-w-[36rem] mx-auto">
+            <div class="mt-8">
+                <p class="text-[15px] text-[#7e7e7e] dark:text-[#7e7e7e]">
+                    404
+                </p>
+                <p class="mt-2 text-[15px]">
+                    That page doesn't exist. <a
+                        href="/"
+                        class="underline underline-offset-4">Head home</a
+                    >.
+                </p>
+            </div>
+        </main>
+    </div>
+</Layout>
