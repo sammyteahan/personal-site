@@ -6,10 +6,22 @@ interface Props {
     subtitle: string;
     start: string;
     end: string;
+    /** Machine-readable equivalents; `endDatetime: null` means ongoing. */
+    startDatetime?: string;
+    endDatetime?: string | null;
     icon: ImageMetadata;
     iconAlt: string;
 }
-const { title, subtitle, start, end, icon, iconAlt } = Astro.props;
+const {
+    title,
+    subtitle,
+    start,
+    end,
+    startDatetime = start,
+    endDatetime,
+    icon,
+    iconAlt,
+} = Astro.props;
 ---
 
 <div class="flex justify-between items-center py-6">
@@ -35,8 +47,14 @@ const { title, subtitle, start, end, icon, iconAlt } = Astro.props;
         </div>
     </div>
     <dd class="ml-auto mr-3 text-sm">
-        <time datetime={start}>{start}</time>
+        <time datetime={startDatetime}>{start}</time>
         <span aria-hidden="true"> — </span>
-        <time datetime={end}>{end}</time>
+        {
+            endDatetime ? (
+                <time datetime={endDatetime}>{end}</time>
+            ) : (
+                <span>{end}</span>
+            )
+        }
     </dd>
 </div>

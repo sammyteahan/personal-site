@@ -6,12 +6,13 @@ import Header from "@/components/Header.astro";
 import ExperienceRow from "@/components/ExperienceRow.astro";
 
 import avatar from "@/assets/avatar.png";
-import lightningkite from "@/assets/logo_lightningkite.jpeg";
-import objective from "@/assets/logo_objective.jpeg";
-import utahstate from "@/assets/logo_utah_state.jpeg";
+import { EXPERIENCE, buildProfileSchema } from "@/data/site";
+
+const title = "Sam Teahan - Software Engineer";
+const schema = buildProfileSchema({ name: title });
 ---
 
-<Layout title="Sam Teahan - Software Engineer">
+<Layout title={title} schema={schema}>
     <div class="h-[100vh] overflow-auto scrollbar-hide">
         <Header />
         <main class="p-4 max-w-[36rem] mx-auto">
@@ -79,30 +80,20 @@ import utahstate from "@/assets/logo_utah_state.jpeg";
                             Work & Education
                         </h2>
                     </div>
-                    <ExperienceRow
-                        title="Objective"
-                        subtitle="Software Developer"
-                        start="2016"
-                        end="Present"
-                        icon={objective}
-                        iconAlt="logo of objective"
-                    />
-                    <ExperienceRow
-                        title="Lightning Kite"
-                        subtitle="Software Developer"
-                        start="2013"
-                        end="2016"
-                        icon={lightningkite}
-                        iconAlt="logo of lightning kite"
-                    />
-                    <ExperienceRow
-                        title="Utah State University"
-                        subtitle="Computer Science Degree"
-                        start="2011"
-                        end="2015"
-                        icon={utahstate}
-                        iconAlt="logo of utah state university"
-                    />
+                    {
+                        EXPERIENCE.map((entry) => (
+                            <ExperienceRow
+                                title={entry.title}
+                                subtitle={entry.subtitle}
+                                start={entry.start}
+                                end={entry.end}
+                                startDatetime={entry.startDatetime}
+                                endDatetime={entry.endDatetime}
+                                icon={entry.icon}
+                                iconAlt={entry.iconAlt}
+                            />
+                        ))
+                    }
                 </div>
 
                 <div

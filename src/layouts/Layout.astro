@@ -1,21 +1,21 @@
 ---
 import "@/styles/globals.css";
 
+import StructuredData from "@/components/StructuredData.astro";
+import { SITE_NAME, SITE_URL, DEFAULT_DESCRIPTION } from "@/data/site";
+
 interface Props {
     title: string;
     description?: string;
     image?: string;
+    schema?: Record<string, unknown>;
 }
-
-const SITE_NAME = "Sam Teahan";
-const SITE_URL = "https://sammyteahan.com";
-const DEFAULT_DESCRIPTION =
-    "Sam Teahan is a software developer and development team lead at Objective with over a decade of experience building and shipping production software.";
 
 const {
     title,
     description = DEFAULT_DESCRIPTION,
     image = "/apple-touch-icon.png",
+    schema,
 } = Astro.props;
 
 // `site` is not set in astro.config.mjs yet, so fall back to the literal base
@@ -48,6 +48,8 @@ const socialImageUrl = new URL(image, baseUrl);
         <meta name="twitter:title" content={title} />
         <meta name="twitter:description" content={description} />
         <meta name="twitter:image" content={socialImageUrl} />
+
+        {schema && <StructuredData schema={schema} />}
 
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
