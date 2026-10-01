@@ -5,6 +5,7 @@ import aws from "astro-sst";
 
 // https://astro.build/config
 export default defineConfig({
+  site: "https://sammyteahan.com",
   output: "server",
   adapter: aws(),
   vite: {

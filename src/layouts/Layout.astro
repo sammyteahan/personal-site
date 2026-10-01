@@ -18,7 +18,6 @@ const {
     schema,
 } = Astro.props;
 
-// `site` is not set in astro.config.mjs yet, so fall back to the literal base
 const baseUrl = Astro.site ?? new URL(SITE_URL);
 const canonicalUrl = new URL(Astro.url.pathname, baseUrl);
 const socialImageUrl = new URL(image, baseUrl);
