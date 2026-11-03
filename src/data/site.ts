@@ -12,6 +12,7 @@ export const DEFAULT_DESCRIPTION =
 export const SOCIAL_LINKS = {
     github: "https://github.com/sammyteahan",
     linkedin: "https://www.linkedin.com/in/sam-teahan-7b9654a8/",
+    x: "https://x.com/SammyTeahan",
     booking: "https://cal.com/sammyteahan",
 };
 
@@ -112,7 +113,7 @@ export function buildProfileSchema({
             worksFor: asOrganization(employers[0], "Organization"),
             alumniOf: schools.map((s) => asOrganization(s, "CollegeOrUniversity")),
             knowsAbout: KNOWS_ABOUT,
-            sameAs: [SOCIAL_LINKS.github, SOCIAL_LINKS.linkedin],
+            sameAs: [SOCIAL_LINKS.github, SOCIAL_LINKS.linkedin, SOCIAL_LINKS.x],
             hasOccupation: employers.map((e) => ({
                 "@type": "Occupation",
                 name: e.subtitle,
